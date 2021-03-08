@@ -3,6 +3,13 @@
     <title>Redir</title>
   </head>
   <body>
+    <script>
+      const queryString = window.location.search;
+      console.log(queryString);
+      const urlParams = new URLSearchParams(queryString);
+      const color = urlParams.get('keyword');
+      alert(color);
+    </script>
     Foo
   </body>
 </html>
