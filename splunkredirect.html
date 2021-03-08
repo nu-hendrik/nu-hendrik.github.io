@@ -5,10 +5,10 @@
   <body>
     <script>
       const queryString = window.location.search;
-      console.log(queryString);
       const urlParams = new URLSearchParams(queryString);
-      const color = urlParams.get('keyword');
-      alert(color);
+      const keyword = urlParams.get('keyword');
+      const url = "https://nubank.splunkcloud.com/en-US/app/search/search?q=search%20index%3Dokta%20earliest%3D-7d%20%22"+keyword+"%22%20%0A%7C%20table%20*"
+      window.location.replace(url);
     </script>
     Foo
   </body>
